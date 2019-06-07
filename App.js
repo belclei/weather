@@ -16,16 +16,14 @@ import { fetchLocationId, fetchWeather } from "./utils/api";
 import getImageForWeather from "./utils/getImageForWeather";
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      location: "",
-      loading: false,
-      error: false,
-      temperature: 0,
-      weather: ""
-    };
-  }
+  state = {
+    location: "",
+    loading: false,
+    error: false,
+    temperature: 0,
+    weather: ""
+  };
+
   handleUpdateLocation = async city => {
     if (!city) return;
 
